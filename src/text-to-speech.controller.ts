@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Res } from '@nestjs/common';
+import { Controller, Post, Res } from '@nestjs/common';
 import { TextToSpeechService } from './text-to-speech.service';
 import { Response } from 'express';
 import { ChatService } from './gpt.service';
@@ -11,9 +11,9 @@ export class TextToSpeechController {
   ) {}
 
   @Post('synthesize')
-  async synthesize(@Body('text') text: string, @Res() res: Response) {
+  async synthesize(@Res() res: Response) {
     try {
-      const gptResponse = await this.chatService.chatWithGPT(text);
+      const gptResponse = await this.chatService.chatWithGPT();
       const request = {
         input: { text: gptResponse },
         voice: {
@@ -34,4 +34,3 @@ export class TextToSpeechController {
     }
   }
 }
-// this is the end of the file

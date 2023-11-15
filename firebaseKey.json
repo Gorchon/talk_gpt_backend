@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "iot-project-cows",
+  "private_key_id": "4accfe7675800c4150bf940b7059d4ec386f2b2a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCMAwptewjZ0lQq\nbawNmwBI0McUlBqEr8HtO4gvngohNuNHseLe6YPmIhwF4GA1PrWcP/LOZvVb5hPy\nrXkXHyrzPMGdRl8Q96RlkgVurEhvR4n9EkK7HkOO6oYWyOY1nByZoFc/MWG0yWkf\nQWWfn1ny5nAYKWPoVLJis5b4+VEFR/Erh/xakdI6omVUrmUQlvSs6Wue/M7eRlG4\njdShZDMth4/24k6yIdutH1wvlN9c8elPT00rGPBRdJmakvr6+v6SHYc1U9iof4nP\nJzv/j3JNkE9F6FPXUHq8OyiFPY6P60VNNb8tw5h+tqgpWAEmcrNtlPR9Pb/oCTCf\nzgxQv6tZAgMBAAECggEARUnB8NEY3bbVORQCN89zshVD2B69CtnxxgWWjT4QNES1\n8EaLiBYW1J4fsRbLdb4dYQBSmCtilAKF76xChxtBBZOVG1B2fm6XOD6tmon+5LcK\nBifxxykgdMsB5aexKWmiy7IKSzcUa8Pa1oFmGbrh6C963LIrA5BaoTbP6VF0c4Bd\n0ygsDirZ1Bn+iP5yxpB1X+jpewk0j7JHz3E4Oc2TDfDOFLezgUKvxoh9WR1c5xqg\nFZTRJwOuzU4tahmVY7+4BZ7taHj0TrAl5Lc+sHMCPILtO93ixC+s0FFhUrJDkA27\n2RUpXbLvx8xkL2xNbcuosTCjbSQtBO3zYsx1gp4oGwKBgQDDUdm2reh6kgGZGdM+\nAaNumqlxwBsiD+F/yW2I7xywfu+ElQqod8GbeInzgsUrTquQgOizPEaSiP5a6OsO\n7Oo37Wdt7ORvXkbq/uI0h8A6eGGnKHEXekP6Yo5Gjo5PVnixmF7qNO/0DVsOo7cU\nHBo4GsP1FhLIgYq49wc3Xa3J5wKBgQC3gnOkk7svb0reu2AL2JmYe8X9WhxMRI3Y\nc8PlK4ClumxUwyIX6GsMb3MsLQdZ4PqQzMB6CY7F+5pU1yYzD4Naa13lCK+X9UID\nRNhOsBhaJxkJ9lh1bXmsgGoIdnDvYYkO0+tGqRgMyWH6RZcZlOV13dCqTIr5umJp\nfiVnNki4vwKBgQCoQjWkSpKQLIFV68pviyfIW1IHHPAC2t1uoQ5MPXhgjyk09NP2\npxvRG/jzHr9N/HqNhI9yAEXnbD56AFamR+/JeCl2p/FuAzBitmoVyLAPbq7pOkya\nZghzhT19iMcNj7dvfoydhDcF7g94QA6yMzdfB6ex1W8e7YGcr6m2x2u0FwKBgHFW\n28/RAnJ4nVhViCuo2qyn/Y/NwN6GFMmULnBzXuB89H2hi4QSo1Mp3otxQDIN1xPp\nshNtpcW38QjnXQt6UFlfKL3VkIYdD2lvct2eu1uq/Db/9ICKXfTh1xtk87mVlw4W\nayDYPSdglef6ZSmCofobRs53ufolWLTpGXbWuzGHAoGAW3gxZBoohr+vDdUJQfMd\nDWEtcOhWBC3VH+B4yu7DOGZ5CbKI4LN6yqE/WfTMykJ4HX2tv5TqllfmjJ6Y2nnn\nZTsUd4xH/VLJGZWb6TThSYr+X99pAjcm6g15BxgnMMh8MEOlpCnMJmpusJ+0KjN2\n+YgU8Dvsgc8d/TjGQt32pLM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-ckatj@iot-project-cows.iam.gserviceaccount.com",
+  "client_id": "109101959806918446153",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ckatj%40iot-project-cows.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
