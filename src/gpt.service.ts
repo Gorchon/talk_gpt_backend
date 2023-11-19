@@ -1,7 +1,6 @@
-// chat.service.ts
 import { Injectable } from '@nestjs/common';
-import * as admin from 'firebase-admin';
 import OpenAI from 'openai';
+import * as admin from 'firebase-admin';
 
 @Injectable()
 export class ChatService {
@@ -24,25 +23,31 @@ export class ChatService {
     });
   }
 
-  async chatWithGPT(): Promise<string> {
+  async getLatestEmotionAndName(): Promise<{ emotion: string | null; name: string | null }> {
     // Get the most recent entry from the emotions collection
-    const snapshot = await admin
+    const emotionsSnapshot = await admin
       .database()
       .ref('emotions')
       .orderByKey()
-      .limitToLast(1) // this is the most recent entry in the database (last one), if we want to put the first one we should use limitToFirst(1)
+      .limitToLast(1)
       .once('value');
-    const latestEntry = snapshot.val();
 
-    if (!latestEntry) {
-      throw new Error('No emotions data found.');
-    }
+    const emotions = emotionsSnapshot.val();
+    const emotionData = emotions ? emotions[Object.keys(emotions)[0]].emotion : null;
 
-    const { name, emotion } = latestEntry[Object.keys(latestEntry)[0]];
+    // Assuming there is a 'name' field in your Firebase data
+    const nameData = emotions ? emotions[Object.keys(emotions)[0]].name : null;
 
+    return { emotion: emotionData, name: nameData };
+  }
+
+  async chatWithGPT(content: string): Promise<string> {
+    const { emotion, name } = await this.getLatestEmotionAndName();
+
+    // Add user's input, emotional context, and name to the conversation history
     this.conversationHistory.push({
       role: 'user',
-      content: `User named ${name} is feeling ${emotion}.`,
+      content: `${content} I am feeling ${emotion} my name is ${name}.`,
     });
 
     const chatCompletion = await this.openai.chat.completions.create({
@@ -53,11 +58,13 @@ export class ChatService {
       model: 'gpt-3.5-turbo',
     });
 
+    // Add the assistant's reply to the conversation history
     this.conversationHistory.push({
       role: 'assistant',
       content: chatCompletion.choices[0].message.content,
     });
 
+    // Return the assistant's reply
     return chatCompletion.choices[0].message.content;
   }
 }

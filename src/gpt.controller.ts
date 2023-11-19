@@ -1,5 +1,4 @@
-// gpt.controller.ts
-import { Controller, Post } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 import { ChatService } from './gpt.service';
 
 @Controller('chat')
@@ -7,7 +6,7 @@ export class ChatController {
   constructor(private readonly chatService: ChatService) {}
 
   @Post()
-  async talkToGPT(): Promise<string> {
-    return this.chatService.chatWithGPT();
+  async talkToGPT(@Body() content: string): Promise<string> {
+    return this.chatService.chatWithGPT(content);
   }
 }
